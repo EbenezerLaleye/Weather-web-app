@@ -61,6 +61,7 @@ main form button {
     margin: 0 15px;
     border-radius: 1.5rem;
     color: #CED4DA;
+    cursor: pointer;
 }
 
 .weather-info {
