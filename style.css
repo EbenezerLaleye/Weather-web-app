@@ -125,6 +125,6 @@ main form button {
     font-weight: 500;
 }
 
-/* .weather-info.loading {
+.weather-info.loading {
     visibility: hidden;
-} */
+}

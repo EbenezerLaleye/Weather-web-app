@@ -39,7 +39,7 @@ function displayWeatherInfo(weatherData) {
     description.innerHTML = weatherData.data.weather[0].description;
     humPercet.innerHTML = `${weatherData.data.main.humidity}%`
     windSpeed.innerHTML = `${Math.round(weatherData.data.wind.speed * 3.6)}KM/h`
-    // document.querySelector(".weather-info").classList.remove("loading")
+    document.querySelector(".weather-info").classList.remove("loading")
 
 }
 
