@@ -43,4 +43,4 @@ function displayWeatherInfo(weatherData) {
 
 }
 
-searchMethod("Milan")
+searchMethod("Berlin")
