@@ -27,7 +27,7 @@ async function getWeatherInfo(city) {
     let latLon = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${weather.apiKey}`)
     let lat = latLon.data[0].lat
     let lon = latLon.data[0].lon
-    let res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weather.apiKey}`)
+    let res = await axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weather.apiKey}`)
     return res
 }
 
