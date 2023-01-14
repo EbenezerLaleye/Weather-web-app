@@ -18,9 +18,8 @@ const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
-    console.log(forecast.children)
+
     forecast.innerHTML = ""
-    // forecast.childElementCount = 0
 
     searchMethod(search.value)
     search.value = ""
@@ -51,7 +50,7 @@ function displayWeatherInfo(weatherData) {
     // console.log(weatherData)
     // cityName.innerHTML = search.value;
     temprature.innerHTML = `${Math.round(weatherData.data.current.temp - 273.15)}°c`
-    weatherIcon.src = `http://openweathermap.org/img/wn/${weatherData.data.current.weather[0].icon}@2x.png`
+    weatherIcon.src = `https://openweathermap.org/img/wn/${weatherData.data.current.weather[0].icon}@2x.png`
     description.innerHTML = weatherData.data.current.weather[0].description;
     humPercet.innerHTML = `${weatherData.data.current.humidity}%`
     windSpeed.innerHTML = `${Math.round(weatherData.data.current.wind_speed * 3.6)}KM/h`
@@ -81,7 +80,7 @@ function createForecast(weatherData, day) {
     newDay.innerHTML = days[day]
     const newImg = document.createElement("img");
     newImg.classList.add("weather-icon")
-    newImg.src = `http://openweathermap.org/img/wn/${weatherData.data.daily[day].weather[0].icon}@2x.png`
+    newImg.src = `https://openweathermap.org/img/wn/${weatherData.data.daily[day].weather[0].icon}@2x.png`
     const newTemp = document.createElement("h3")
     newTemp.classList.add("daily-temp");
     newTemp.innerHTML = `${Math.round(weatherData.data.daily[day].temp.day - 273.15)}°c`;
