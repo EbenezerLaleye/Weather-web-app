@@ -15,7 +15,7 @@ body {
 }
 
 main {
-    max-width: 800px;
+    /* max-width: 1000px; */
     width: 100%;
     height: auto;
     display: flex;
@@ -126,6 +126,34 @@ main form button {
     font-weight: 500;
 }
 
-.weather-info.loading {
+/* .weather-info.loading {
     visibility: hidden;
+} */
+
+.forecast {
+    display: flex;
+    padding-top: 2rem;
+    justify-content: space-between;
+    /* column-gap: 20px; */
+}
+
+.daily-forecast {
+    display: flex;
+    flex-direction: column;
+    background: rgba(52, 58, 64, 0.2);
+    padding: 2rem;
+    border: 2px solid #CED4DA;
+    border-radius: 0.5rem;
+
+}
+
+.daily-forecast h3,
+h4 {
+    font-weight: 400;
+}
+
+.days {
+    padding: 0.2rem 1rem;
+    background: rgba(52, 58, 64, 0.5);
+    border-radius: 1rem;
 }
