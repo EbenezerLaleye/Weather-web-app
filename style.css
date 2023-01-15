@@ -8,7 +8,7 @@
 body {
     background-image: url(https://images.unsplash.com/photo-1545569341-9eb8b30979d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +17,7 @@ body {
 main {
     /* max-width: 1000px; */
     width: 100%;
-    height: auto;
+    /* min-height: 1000px; */
     display: flex;
     flex-direction: column;
     background: rgba(0, 0, 0, 0.5);
@@ -39,6 +39,10 @@ button {
     outline: none;
     border: none;
     background: none;
+}
+
+.search {
+    padding-top: 2rem;
 }
 
 #search-input {
@@ -69,6 +73,7 @@ main form button {
     flex-direction: column;
     padding: 2rem 1rem;
     color: #CED4DA;
+
 }
 
 .weather-title {
@@ -131,29 +136,46 @@ main form button {
 } */
 
 .forecast {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     padding-top: 2rem;
-    justify-content: space-between;
-    /* column-gap: 20px; */
+    justify-items: center;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+
 }
 
 .daily-forecast {
+    max-width: 300px;
+    width: 100%;
+    min-height: 300px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: rgba(52, 58, 64, 0.2);
-    padding: 2rem;
+    padding: 1rem;
     border: 2px solid #CED4DA;
     border-radius: 0.5rem;
+    box-sizing: border-box;
 
 }
 
 .daily-forecast h3,
 h4 {
     font-weight: 400;
+    text-align: center;
 }
 
 .days {
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 0.2rem;
     background: rgba(52, 58, 64, 0.5);
     border-radius: 1rem;
+    text-align: center;
+}
+
+@media(max-width:770px) {
+    .forecast {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

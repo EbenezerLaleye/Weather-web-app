@@ -59,7 +59,7 @@ function displayWeatherInfo(weatherData) {
 
 }
 function getDay(weatherData) {
-    for (let i = 0; i <= 5; i++) {
+    for (let i = 0; i <= 3; i++) {
         const timeUnix = weatherData.data.daily[i].dt
         const milisecs = timeUnix * 1000;
         const date = new Date(milisecs)
