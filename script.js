@@ -20,9 +20,12 @@ weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
 
     forecast.innerHTML = ""
-
-    searchMethod(search.value)
-    search.value = ""
+    if (!search.value) {
+        alert("please type in a City")
+    } else {
+        searchMethod(search.value)
+        search.value = ""
+    }
 })
 async function searchMethod(city) {
     console.log(city)

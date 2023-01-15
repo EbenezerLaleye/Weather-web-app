@@ -41,7 +41,7 @@ button {
     background: none;
 }
 
-.search form {
+.search {
     padding-top: 2rem;
 }
 
@@ -68,7 +68,7 @@ main form button {
     justify-content: center;
     align-items: center;
     background: rgba(52, 58, 64, 0.1);
-    padding: 0.6rem;
+    padding: 1rem;
     margin: 0 15px;
     border-radius: 1.5rem;
     color: #CED4DA;
@@ -138,9 +138,9 @@ main form button {
     font-weight: 500;
 }
 
-/* .weather-info.loading {
+.weather-info.loading {
     visibility: hidden;
-} */
+}
 
 .forecast {
     display: grid;
