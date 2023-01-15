@@ -41,9 +41,16 @@ button {
     background: none;
 }
 
-.search {
+.search form {
     padding-top: 2rem;
 }
+
+.search form {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
 
 #search-input {
     background: rgba(173, 181, 189, 0.5);
